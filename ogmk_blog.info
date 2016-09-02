@@ -1,0 +1,52 @@
+name = Commerce Marketplace Blog
+description = A module that provides blog functionality for a commerce marketplace.
+core = 7.x
+package = Commerce Marketplace Features
+version = 7.x-0.1-dev
+
+; OGMK dependencies.
+dependencies[] = ogmk_base
+dependencies[] = ogmk_shops
+
+; Other dependencies.
+dependencies[] = ctools
+dependencies[] = entityreference
+dependencies[] = features
+dependencies[] = node
+dependencies[] = og
+dependencies[] = og_moderation
+dependencies[] = publication_date
+dependencies[] = strongarm
+dependencies[] = text
+
+features[ctools][] = strongarm:strongarm:1
+features[features_api][] = api:2
+features[field_instance][] = node-ogmk_post-ogmk_body
+features[field_instance][] = node-ogmk_post-ogmk_shop_ref
+features[field_instance][] = node-ogmk_post-title_field
+features[node][] = ogmk_post
+features[og_features_permission][] = node:ogmk_shop:access authoring options of ogmk_post content
+features[og_features_permission][] = node:ogmk_shop:access publishing options of ogmk_post content
+features[og_features_permission][] = node:ogmk_shop:access revisions options of ogmk_post content
+features[og_features_permission][] = node:ogmk_shop:create ogmk_post content
+features[og_features_permission][] = node:ogmk_shop:delete any ogmk_post content
+features[og_features_permission][] = node:ogmk_shop:delete own ogmk_post content
+features[og_features_permission][] = node:ogmk_shop:update any ogmk_post content
+features[og_features_permission][] = node:ogmk_shop:update own ogmk_post content
+features[og_features_permission][] = node:ogmk_shop:view any unpublished ogmk_post content
+features[user_permission][] = create ogmk_post content
+features[user_permission][] = delete any ogmk_post content
+features[user_permission][] = delete own ogmk_post content
+features[user_permission][] = edit any ogmk_post content
+features[user_permission][] = edit own ogmk_post content
+features[user_permission][] = set ogmk_post published on date
+features[variable][] = entity_translation_hide_translation_links_ogmk_post
+features[variable][] = entity_translation_node_metadata_ogmk_post
+features[variable][] = field_bundle_settings_node__ogmk_post
+features[variable][] = language_content_type_ogmk_post
+features[variable][] = menu_options_ogmk_post
+features[variable][] = menu_parent_ogmk_post
+features[variable][] = node_options_ogmk_post
+features[variable][] = node_preview_ogmk_post
+features[variable][] = node_submitted_ogmk_post
+features[variable][] = save_continue_ogmk_post
