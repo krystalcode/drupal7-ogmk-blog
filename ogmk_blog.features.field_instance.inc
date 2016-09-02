@@ -71,8 +71,8 @@ function ogmk_blog_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-ogmk_post-ogmk_shop_ref'.
-  $field_instances['node-ogmk_post-ogmk_shop_ref'] = array(
+  // Exported field_instance: 'node-ogmk_post-ogmk_shops_ref'.
+  $field_instances['node-ogmk_post-ogmk_shops_ref'] = array(
     'bundle' => 'ogmk_post',
     'default_value' => NULL,
     'default_value_function' => 'entityreference_prepopulate_field_default_value',
@@ -96,8 +96,8 @@ function ogmk_blog_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'ogmk_shop_ref',
-    'label' => 'Shop',
+    'field_name' => 'ogmk_shops_ref',
+    'label' => 'Shops',
     'required' => 0,
     'settings' => array(
       'behaviors' => array(
@@ -181,7 +181,7 @@ function ogmk_blog_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Body');
-  t('Shop');
+  t('Shops');
   t('Title');
 
   return $field_instances;

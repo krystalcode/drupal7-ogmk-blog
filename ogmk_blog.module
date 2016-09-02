@@ -15,32 +15,23 @@ include_once 'ogmk_blog.features.inc';
  */
 function ogmk_blog_form_ogmk_post_node_form_alter(&$form, &$form_state, $form_id) {
   // If the user cannot post globally (e.g. not without defining a shop
-  // context), we mark the ogmk_shop_ref field as required, and we disable the
-  // 'None' option.
+  // context), we mark the ogmk_shops_ref field as required.
   $can_post_globally = user_access('create ogmk_post content');
-  $language          = $form['ogmk_shop_ref']['#language'];
-  $shop_options      = &$form['ogmk_shop_ref'][$language][0]['default']['#options'];
 
   if (!$can_post_globally) {
-    $form['ogmk_shop_ref'][$language][0]['#required'] = TRUE;
-
-    /**
-     * @Issue(
-     *   "Do we need field validation as well to prevent the user from tampering
-     *   with the form?"
-     *   type="bug"
-     *   priority="normal"
-     *   labels="security"
-     * )
-     */
-    unset($shop_options['_none']);
+    $language = $form['ogmk_shops_ref']['#language'];
+    $form['ogmk_shops_ref'][$language][0]['#required'] = TRUE;
 
     // If there is only 1 shop that the user can post to, there's no point in
     // displaying the field. Pre-select the only option and deny access to the
     // field.
-    if (count($shop_options) == 1) {
-      $form['ogmk_shop_ref'][$language][0]['default']['#default_value'] = key($shop_options);
-      $form['ogmk_shop_ref']['#access'] = FALSE;
+    $shop_options = &$form['ogmk_shops_ref'][$language][0]['default']['#options'];
+
+    // 1 Shop + the 'None' option = 2 options.
+    if (count($shop_options) == 2) {
+      unset($shop_options['_none']);
+      $form['ogmk_shops_ref'][$language][0]['default']['#default_value'] = key($shop_options);
+      $form['ogmk_shops_ref']['#access'] = FALSE;
     }
   }
 }
