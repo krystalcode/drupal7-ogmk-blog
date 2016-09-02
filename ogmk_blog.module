@@ -34,4 +34,13 @@ function ogmk_blog_form_ogmk_post_node_form_alter(&$form, &$form_state, $form_id
       $form['ogmk_shops_ref']['#access'] = FALSE;
     }
   }
+
+  // Add a Cancel button.
+  $form['actions']['cancel'] = array(
+    '#type' => 'button',
+    '#access' => TRUE,
+    '#value' => t('Cancel'),
+    '#attributes' => array('onClick' => 'history.go(-1);return true;'),
+    '#weight' => 6,
+  );
 }
