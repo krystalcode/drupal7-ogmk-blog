@@ -18,8 +18,11 @@ dependencies[] = og_moderation
 dependencies[] = publication_date
 dependencies[] = strongarm
 dependencies[] = text
+dependencies[] = views
+dependencies[] = views_bootstrap
 
 features[ctools][] = strongarm:strongarm:1
+features[ctools][] = views:views_default:3.0
 features[features_api][] = api:2
 features[field_instance][] = node-ogmk_post-ogmk_body
 features[field_instance][] = node-ogmk_post-ogmk_image
@@ -62,3 +65,4 @@ features[variable][] = pathauto_node_ogmk_post_es_pattern
 features[variable][] = pathauto_node_ogmk_post_pattern
 features[variable][] = pathauto_node_ogmk_post_und_pattern
 features[variable][] = save_continue_ogmk_post
+features[views_view][] = ogmk_blog
