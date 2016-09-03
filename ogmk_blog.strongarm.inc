@@ -29,7 +29,29 @@ function ogmk_blog_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_node__ogmk_post';
   $strongarm->value = array(
-    'view_modes' => array(),
+    'view_modes' => array(
+      'teaser' => array(
+        'custom_settings' => TRUE,
+      ),
+      'full' => array(
+        'custom_settings' => FALSE,
+      ),
+      'rss' => array(
+        'custom_settings' => FALSE,
+      ),
+      'info' => array(
+        'custom_settings' => FALSE,
+      ),
+      'ogmk_bootstrap_media' => array(
+        'custom_settings' => FALSE,
+      ),
+      'ogmk_manage_teaser' => array(
+        'custom_settings' => FALSE,
+      ),
+      'token' => array(
+        'custom_settings' => FALSE,
+      ),
+    ),
     'extra_fields' => array(
       'form' => array(
         'title' => array(
@@ -39,10 +61,21 @@ function ogmk_blog_strongarm() {
           'weight' => '5',
         ),
         'language' => array(
-          'weight' => '1',
+          'weight' => '4',
         ),
       ),
-      'display' => array(),
+      'display' => array(
+        'sharethis' => array(
+          'default' => array(
+            'weight' => '3',
+            'visible' => TRUE,
+          ),
+          'teaser' => array(
+            'weight' => '1',
+            'visible' => FALSE,
+          ),
+        ),
+      ),
     ),
   );
   $export['field_bundle_settings_node__ogmk_post'] = $strongarm;
