@@ -133,7 +133,7 @@ function ogmk_blog_strongarm() {
             'visible' => TRUE,
           ),
           'teaser' => array(
-            'weight' => '1',
+            'weight' => '2',
             'visible' => FALSE,
           ),
           'rss' => array(
