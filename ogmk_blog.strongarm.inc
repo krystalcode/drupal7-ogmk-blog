@@ -120,7 +120,7 @@ function ogmk_blog_strongarm() {
           'weight' => '-5',
         ),
         'path' => array(
-          'weight' => '5',
+          'weight' => '3',
         ),
         'language' => array(
           'weight' => '4',

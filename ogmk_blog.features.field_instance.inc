@@ -142,7 +142,7 @@ function ogmk_blog_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 2,
+      'weight' => 3,
     ),
   );
 
@@ -212,7 +212,7 @@ function ogmk_blog_field_default_field_instances() {
       'module' => 'og',
       'settings' => array(),
       'type' => 'og_complex',
-      'weight' => 0,
+      'weight' => 2,
     ),
   );
 
@@ -261,7 +261,7 @@ function ogmk_blog_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 1,
+      'weight' => 2,
     ),
   );
 
