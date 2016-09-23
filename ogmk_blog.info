@@ -54,6 +54,7 @@ features[variable][] = comment_preview_ogmk_post
 features[variable][] = comment_subject_field_ogmk_post
 features[variable][] = entity_translation_hide_translation_links_ogmk_post
 features[variable][] = entity_translation_node_metadata_ogmk_post
+features[variable][] = entity_translation_settings_node__ogmk_post
 features[variable][] = field_bundle_settings_node__ogmk_post
 features[variable][] = language_content_type_ogmk_post
 features[variable][] = menu_options_ogmk_post
