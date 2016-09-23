@@ -12,6 +12,7 @@ dependencies[] = ogmk_shops
 dependencies[] = ctools
 dependencies[] = entityreference
 dependencies[] = features
+dependencies[] = image
 dependencies[] = node
 dependencies[] = og
 dependencies[] = og_moderation
