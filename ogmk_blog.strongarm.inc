@@ -86,7 +86,7 @@ function ogmk_blog_strongarm() {
         'custom_settings' => FALSE,
       ),
       'rss' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'info' => array(
         'custom_settings' => FALSE,
@@ -121,6 +121,10 @@ function ogmk_blog_strongarm() {
           ),
           'teaser' => array(
             'weight' => '1',
+            'visible' => FALSE,
+          ),
+          'rss' => array(
+            'weight' => '2',
             'visible' => FALSE,
           ),
         ),
