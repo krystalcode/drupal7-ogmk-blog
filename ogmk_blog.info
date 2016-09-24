@@ -20,6 +20,7 @@ dependencies[] = og_moderation
 dependencies[] = og_ui
 dependencies[] = publication_date
 dependencies[] = strongarm
+dependencies[] = taxonomy
 dependencies[] = text
 dependencies[] = views
 dependencies[] = views_bootstrap
