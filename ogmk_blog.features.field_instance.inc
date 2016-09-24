@@ -202,12 +202,10 @@ function ogmk_blog_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'inline',
-        'module' => 'entityreference',
-        'settings' => array(
-          'link' => FALSE,
-        ),
-        'type' => 'entityreference_label',
+        'label' => 'hidden',
+        'module' => 'og_ui',
+        'settings' => array(),
+        'type' => 'og_list_default',
         'weight' => 2,
       ),
       'rss' => array(

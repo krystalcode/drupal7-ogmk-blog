@@ -17,6 +17,7 @@ dependencies[] = image
 dependencies[] = node
 dependencies[] = og
 dependencies[] = og_moderation
+dependencies[] = og_ui
 dependencies[] = publication_date
 dependencies[] = strongarm
 dependencies[] = text
