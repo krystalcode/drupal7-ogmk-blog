@@ -159,6 +159,7 @@ function ogmk_blog_field_group_info() {
     'weight' => '5',
     'children' => array(
       0 => 'ogmk_shops_ref',
+      1 => 'ogmk_blog_labels_ref',
     ),
     'format_type' => 'bootstrap_grid_col',
     'format_settings' => array(

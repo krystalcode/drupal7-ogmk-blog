@@ -10,6 +10,53 @@
 function ogmk_blog_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance: 'node-ogmk_post-ogmk_blog_labels_ref'.
+  $field_instances['node-ogmk_post-ogmk_blog_labels_ref'] = array(
+    'bundle' => 'ogmk_post',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 3,
+      ),
+      'rss' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'ogmk_blog_labels_ref',
+    'label' => 'Labels',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'taxonomy',
+      'settings' => array(
+        'autocomplete_path' => 'taxonomy/autocomplete',
+        'size' => 60,
+      ),
+      'type' => 'taxonomy_autocomplete',
+      'weight' => 3,
+    ),
+  );
+
   // Exported field_instance: 'node-ogmk_post-ogmk_body'.
   $field_instances['node-ogmk_post-ogmk_body'] = array(
     'bundle' => 'ogmk_post',
@@ -227,7 +274,7 @@ function ogmk_blog_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 4,
+        'weight' => 5,
       ),
       'rss' => array(
         'label' => 'above',
@@ -269,6 +316,7 @@ function ogmk_blog_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('Body');
   t('Cover Image');
+  t('Labels');
   t('Shops');
   t('Title');
 

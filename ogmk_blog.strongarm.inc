@@ -129,7 +129,7 @@ function ogmk_blog_strongarm() {
       'display' => array(
         'sharethis' => array(
           'default' => array(
-            'weight' => '3',
+            'weight' => '4',
             'visible' => TRUE,
           ),
           'teaser' => array(
