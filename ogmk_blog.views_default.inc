@@ -72,6 +72,13 @@ function ogmk_blog_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'node_rss';
   $handler->display->display_options['row_options']['item_length'] = 'rss';
   $handler->display->display_options['path'] = 'blog/rss';
+
+  /* Display: Block */
+  $handler = $view->new_display('block', 'Block', 'block');
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '4';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
   $translatables['ogmk_blog'] = array(
     t('Master'),
     t('Blog'),
@@ -90,6 +97,7 @@ function ogmk_blog_views_default_views() {
     t('last »'),
     t('Page'),
     t('Feed'),
+    t('Block'),
   );
   $export['ogmk_blog'] = $view;
 
