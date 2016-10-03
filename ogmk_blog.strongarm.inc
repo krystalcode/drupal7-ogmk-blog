@@ -105,7 +105,7 @@ function ogmk_blog_strongarm() {
         'custom_settings' => FALSE,
       ),
       'ogmk_bootstrap_media' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'ogmk_manage_teaser' => array(
         'custom_settings' => FALSE,
@@ -138,6 +138,10 @@ function ogmk_blog_strongarm() {
           ),
           'rss' => array(
             'weight' => '2',
+            'visible' => FALSE,
+          ),
+          'ogmk_bootstrap_media' => array(
+            'weight' => '4',
             'visible' => FALSE,
           ),
         ),
