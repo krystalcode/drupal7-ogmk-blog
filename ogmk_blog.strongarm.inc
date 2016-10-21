@@ -89,6 +89,19 @@ function ogmk_blog_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'entity_translation_settings_taxonomy_term__ogmk_blog_labels';
+  $strongarm->value = array(
+    'default_language' => 'und',
+    'hide_language_selector' => 1,
+    'exclude_language_none' => 0,
+    'lock_language' => 0,
+    'shared_fields_original_only' => 1,
+  );
+  $export['entity_translation_settings_taxonomy_term__ogmk_blog_labels'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_node__ogmk_post';
   $strongarm->value = array(
     'view_modes' => array(
@@ -221,6 +234,13 @@ function ogmk_blog_strongarm() {
   $strongarm->name = 'pathauto_node_ogmk_post_und_pattern';
   $strongarm->value = 'posts/[node:nid]/[node:title]';
   $export['pathauto_node_ogmk_post_und_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_term_ogmk_blog_labels_pattern';
+  $strongarm->value = 'blog/labels/[term:tid]/[term:name]';
+  $export['pathauto_taxonomy_term_ogmk_blog_labels_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
