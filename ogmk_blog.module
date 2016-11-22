@@ -118,6 +118,45 @@ function ogmk_blog_pathauto($op) {
 }
 
 /**
+ * Public API.
+ */
+
+/**
+ * Check if the given shop has at least one published post in its blog.
+ *
+ * @param int|object The ID or object of the shop.
+ *
+ * @return boolean Whether the given shop has at least one post or not.
+ */
+function ogmk_blog_shop_has_posts($shop) {
+  $shop_id = NULL;
+  if (is_int($shop)) {
+    $shop_id = $shop;
+  } else {
+    $shop_id = $shop->nid;
+  }
+
+  // Check if there is at least one published post referencing the shop.
+  $query = new EntityFieldQuery();
+  $query
+    ->entityCondition('entity_type', 'node')
+    ->propertyCondition('status', NODE_PUBLISHED)
+    ->propertyCondition('type', 'ogmk_post')
+    ->fieldCondition('ogmk_shops_ref', 'target_id', $shop_id)
+    ->range(0, 1)
+  ;
+  $result = $query->execute();
+
+  if (empty($result['node'])) {
+    return 0;
+  }
+
+  // Get the first key of the result array because there should be only one
+  // result.
+  return key($result['node']);
+}
+
+/**
  * Functions for internal use.
  */
 
