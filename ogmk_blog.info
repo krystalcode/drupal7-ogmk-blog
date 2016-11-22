@@ -87,4 +87,5 @@ features[variable][] = pathauto_ogmk_blog_pattern
 features[variable][] = pathauto_taxonomy_term_ogmk_blog_labels_pattern
 features[variable][] = save_continue_ogmk_post
 features[views_view][] = ogmk_blog
+features[views_view][] = ogmk_blog_shop
 features[views_view][] = ogmk_user_posts_authored
