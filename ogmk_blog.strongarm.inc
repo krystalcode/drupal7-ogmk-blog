@@ -238,6 +238,13 @@ function ogmk_blog_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_ogmk_blog_pattern';
+  $strongarm->value = 'shops/[node:nid]/blog';
+  $export['pathauto_ogmk_blog_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_taxonomy_term_ogmk_blog_labels_pattern';
   $strongarm->value = 'blog/labels/[term:tid]/[term:name]';
   $export['pathauto_taxonomy_term_ogmk_blog_labels_pattern'] = $strongarm;
