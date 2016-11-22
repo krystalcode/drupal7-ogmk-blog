@@ -79,6 +79,45 @@ function ogmk_blog_form_ogmk_post_node_form_alter(&$form, &$form_state, $form_id
 }
 
 /**
+ * Implements hook_path_alias_types().
+ */
+function ogmk_blog_path_alias_types() {
+  $objects['ogmk_blog'] = t('OGMK Shop Blogs');
+  return $objects;
+}
+
+/**
+ * Implements hook_pathauto().
+ */
+function ogmk_blog_pathauto($op) {
+  switch ($op) {
+    case 'settings':
+      $settings = array();
+      $settings['module'] = 'ogmk_blog';
+      $settings['token_type'] = 'node';
+      $settings['groupheader'] = t('OGMK Blog paths');
+      $settings['patterndescr'] = t('Default path pattern');
+      $settings['patterndefault'] = 'shops/[node:nid]/blog';
+      $settings['batch_update_callback'] = '_ogmk_blog__pathauto_bulk_update_batch_process';
+      $settings['batch_file'] = drupal_get_path('module', 'ogmk_blog') . '/includes/ogmk_blog.pathauto.inc';
+
+      /**
+       * @Issue(
+       *   "Implement language patterns for OGMK blog paths"
+       *   type="improvement"
+       *   priority="low"
+       *   labels="internationalisation"
+       * )
+       */
+
+      return (object) $settings;
+
+    default:
+      break;
+  }
+}
+
+/**
  * Functions for internal use.
  */
 
