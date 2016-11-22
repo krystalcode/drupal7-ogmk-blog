@@ -24,7 +24,7 @@ function ogmk_blog_field_group_info() {
     'weight' => '3',
     'children' => array(
       0 => 'title_field',
-      1 => 'ogmk_body',
+      1 => 'ogmk_text_with_summary',
     ),
     'format_type' => 'bootstrap_grid_col',
     'format_settings' => array(

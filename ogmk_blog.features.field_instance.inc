@@ -129,8 +129,8 @@ function ogmk_blog_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-ogmk_post-ogmk_body'.
-  $field_instances['node-ogmk_post-ogmk_body'] = array(
+  // Exported field_instance: 'node-ogmk_post-ogmk_text_with_summary'.
+  $field_instances['node-ogmk_post-ogmk_text_with_summary'] = array(
     'bundle' => 'ogmk_post',
     'default_value' => NULL,
     'deleted' => 0,
@@ -170,7 +170,7 @@ function ogmk_blog_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'ogmk_body',
+    'field_name' => 'ogmk_text_with_summary',
     'label' => 'Body',
     'required' => 0,
     'settings' => array(
