@@ -10,8 +10,8 @@
 function ogmk_blog_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'comment-comment_node_ogmk_post-comment_body'.
-  $field_instances['comment-comment_node_ogmk_post-comment_body'] = array(
+  // Exported field_instance: 'comment-comment_node_ogmk_post-ogmk_text_long'.
+  $field_instances['comment-comment_node_ogmk_post-ogmk_text_long'] = array(
     'bundle' => 'comment_node_ogmk_post',
     'default_value' => NULL,
     'deleted' => 0,
@@ -35,13 +35,15 @@ function ogmk_blog_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'comment',
-    'field_name' => 'comment_body',
+    'field_name' => 'ogmk_text_long',
     'label' => 'Comment',
     'required' => 1,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
+          'bonsai_html' => 0,
           'ogmk_basic_html' => 0,
+          'ogmk_html' => 0,
           'ogmk_plain_html' => 'ogmk_plain_html',
           'plain_text' => 0,
         ),
@@ -49,7 +51,13 @@ function ogmk_blog_field_default_field_instances() {
         'default_order_toggle' => 0,
         'default_order_wrapper' => array(
           'formats' => array(
+            'bonsai_html' => array(
+              'weight' => 0,
+            ),
             'ogmk_basic_html' => array(
+              'weight' => 0,
+            ),
+            'ogmk_html' => array(
               'weight' => 0,
             ),
             'ogmk_plain_html' => array(
