@@ -250,7 +250,7 @@ function ogmk_blog_field_default_field_instances() {
         'module' => 'image',
         'settings' => array(
           'image_link' => 'content',
-          'image_style' => 'views_bootstrap_thumbnails',
+          'image_style' => '700x525',
         ),
         'type' => 'image',
         'weight' => 0,
