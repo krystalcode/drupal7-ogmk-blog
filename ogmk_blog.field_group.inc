@@ -92,6 +92,7 @@ function ogmk_blog_field_group_info() {
     'weight' => '8',
     'children' => array(
       0 => 'ogmk_image',
+      1 => 'ogmk_atom_ref',
     ),
     'format_type' => 'bootstrap_grid_col',
     'format_settings' => array(

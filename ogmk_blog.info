@@ -6,6 +6,7 @@ version = 7.x-0.1-dev
 
 ; OGMK dependencies.
 dependencies[] = ogmk_base
+dependencies[] = ogmk_scald
 dependencies[] = ogmk_shops
 
 ; Other dependencies.
@@ -38,6 +39,7 @@ features[field_group][] = group_r2|node|ogmk_post|form
 features[field_group][] = group_r3c1|node|ogmk_post|form
 features[field_group][] = group_r3|node|ogmk_post|form
 features[field_instance][] = comment-comment_node_ogmk_post-ogmk_text_long
+features[field_instance][] = node-ogmk_post-ogmk_atom_ref
 features[field_instance][] = node-ogmk_post-ogmk_blog_labels_ref
 features[field_instance][] = node-ogmk_post-ogmk_image
 features[field_instance][] = node-ogmk_post-ogmk_shops_ref

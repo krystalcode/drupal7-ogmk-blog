@@ -142,19 +142,19 @@ function ogmk_blog_strongarm() {
       'display' => array(
         'sharethis' => array(
           'default' => array(
-            'weight' => '4',
+            'weight' => '6',
             'visible' => TRUE,
           ),
           'teaser' => array(
-            'weight' => '2',
+            'weight' => '5',
             'visible' => FALSE,
           ),
           'rss' => array(
-            'weight' => '2',
+            'weight' => '4',
             'visible' => FALSE,
           ),
           'ogmk_bootstrap_media' => array(
-            'weight' => '4',
+            'weight' => '6',
             'visible' => FALSE,
           ),
         ),

@@ -22,7 +22,7 @@ function ogmk_blog_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 0,
+        'weight' => 1,
       ),
       'ogmk_bootstrap_media' => array(
         'label' => 'hidden',
@@ -31,7 +31,7 @@ function ogmk_blog_field_default_field_instances() {
           'trim_length' => 300,
         ),
         'type' => 'text_trimmed',
-        'weight' => 0,
+        'weight' => 1,
       ),
     ),
     'entity_type' => 'comment',
@@ -69,7 +69,10 @@ function ogmk_blog_field_default_field_instances() {
           ),
         ),
       ),
+      'context' => '',
+      'dnd_enabled' => 0,
       'entity_translation_sync' => FALSE,
+      'mee_enabled' => 0,
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
@@ -80,7 +83,78 @@ function ogmk_blog_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 0,
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance: 'node-ogmk_post-ogmk_atom_ref'.
+  $field_instances['node-ogmk_post-ogmk_atom_ref'] = array(
+    'bundle' => 'ogmk_post',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'atom_reference',
+        'settings' => array(
+          'link' => 0,
+          'override' => 0,
+        ),
+        'type' => 'image_1110',
+        'weight' => 0,
+      ),
+      'ogmk_bootstrap_media' => array(
+        'label' => 'hidden',
+        'module' => 'atom_reference',
+        'settings' => array(
+          'link' => 1,
+          'override' => 0,
+        ),
+        'type' => 'image_100x80',
+        'weight' => 0,
+      ),
+      'rss' => array(
+        'label' => 'hidden',
+        'module' => 'atom_reference',
+        'settings' => array(
+          'link' => 0,
+          'override' => 0,
+        ),
+        'type' => 'image_1110',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'hidden',
+        'module' => 'atom_reference',
+        'settings' => array(
+          'link' => 1,
+          'override' => 0,
+        ),
+        'type' => 'image_700x525',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'ogmk_atom_ref',
+    'label' => 'Header Resource',
+    'required' => 0,
+    'settings' => array(
+      'allow_override' => 0,
+      'entity_translation_sync' => FALSE,
+      'referencable_types' => array(
+        'image' => 0,
+      ),
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'atom_reference',
+      'settings' => array(
+        'context' => 'sdl_editor_representation',
+      ),
+      'type' => 'atom_reference_textfield',
+      'weight' => 6,
     ),
   );
 
@@ -96,25 +170,25 @@ function ogmk_blog_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 3,
+        'weight' => 5,
       ),
       'ogmk_bootstrap_media' => array(
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 3,
+        'weight' => 5,
       ),
       'rss' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 4,
       ),
     ),
     'entity_type' => 'node',
@@ -151,7 +225,7 @@ function ogmk_blog_field_default_field_instances() {
           'image_style' => 1110,
         ),
         'type' => 'image',
-        'weight' => 0,
+        'weight' => 2,
       ),
       'ogmk_bootstrap_media' => array(
         'label' => 'hidden',
@@ -161,7 +235,7 @@ function ogmk_blog_field_default_field_instances() {
           'image_style' => '100x80',
         ),
         'type' => 'image',
-        'weight' => 0,
+        'weight' => 2,
       ),
       'rss' => array(
         'label' => 'hidden',
@@ -171,7 +245,7 @@ function ogmk_blog_field_default_field_instances() {
           'image_style' => 1110,
         ),
         'type' => 'image',
-        'weight' => 0,
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -181,7 +255,7 @@ function ogmk_blog_field_default_field_instances() {
           'image_style' => '700x525',
         ),
         'type' => 'image',
-        'weight' => 0,
+        'weight' => 2,
       ),
     ),
     'entity_type' => 'node',
@@ -208,7 +282,7 @@ function ogmk_blog_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 3,
+      'weight' => 8,
     ),
   );
 
@@ -225,25 +299,25 @@ function ogmk_blog_field_default_field_instances() {
         'module' => 'og_ui',
         'settings' => array(),
         'type' => 'og_list_default',
-        'weight' => 2,
+        'weight' => 4,
       ),
       'ogmk_bootstrap_media' => array(
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 2,
+        'weight' => 4,
       ),
       'rss' => array(
         'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 3,
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 3,
+        'weight' => 6,
       ),
     ),
     'entity_type' => 'node',
@@ -298,7 +372,7 @@ function ogmk_blog_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 1,
+        'weight' => 3,
       ),
       'ogmk_bootstrap_media' => array(
         'label' => 'hidden',
@@ -307,14 +381,14 @@ function ogmk_blog_field_default_field_instances() {
           'trim_length' => 300,
         ),
         'type' => 'text_summary_or_trimmed',
-        'weight' => 1,
+        'weight' => 3,
       ),
       'rss' => array(
         'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 1,
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -323,7 +397,7 @@ function ogmk_blog_field_default_field_instances() {
           'trim_length' => 300,
         ),
         'type' => 'text_summary_or_trimmed',
-        'weight' => 1,
+        'weight' => 3,
       ),
     ),
     'entity_type' => 'node',
@@ -349,8 +423,12 @@ function ogmk_blog_field_default_field_instances() {
           ),
         ),
       ),
+      'context' => 'title',
+      'context_default' => 'sdl_editor_representation',
       'display_summary' => 1,
+      'dnd_enabled' => 1,
       'entity_translation_sync' => FALSE,
+      'mee_enabled' => 1,
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
@@ -377,25 +455,25 @@ function ogmk_blog_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 5,
+        'weight' => 7,
       ),
       'ogmk_bootstrap_media' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 5,
+        'weight' => 7,
       ),
       'rss' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 4,
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 4,
+        'weight' => 7,
       ),
     ),
     'entity_type' => 'node',
@@ -403,11 +481,14 @@ function ogmk_blog_field_default_field_instances() {
     'label' => 'Title',
     'required' => TRUE,
     'settings' => array(
+      'context' => '',
+      'dnd_enabled' => 0,
       'entity_translation_sync' => FALSE,
       'hide_label' => array(
         'entity' => FALSE,
         'page' => FALSE,
       ),
+      'mee_enabled' => 0,
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -426,6 +507,7 @@ function ogmk_blog_field_default_field_instances() {
   t('Body');
   t('Comment');
   t('Cover Image');
+  t('Header Resource');
   t('Labels');
   t('Shops');
   t('Title');
