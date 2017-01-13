@@ -10,6 +10,7 @@ dependencies[] = ogmk_scald
 dependencies[] = ogmk_shops
 
 ; Other dependencies.
+dependencies[] = atom_reference
 dependencies[] = ctools
 dependencies[] = entityreference
 dependencies[] = features
