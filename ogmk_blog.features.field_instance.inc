@@ -121,7 +121,7 @@ function ogmk_blog_field_default_field_instances() {
           'link' => 0,
           'override' => 0,
         ),
-        'type' => 'image_1110',
+        'type' => 'image_700',
         'weight' => 0,
       ),
       'teaser' => array(
@@ -242,7 +242,7 @@ function ogmk_blog_field_default_field_instances() {
         'module' => 'image',
         'settings' => array(
           'image_link' => '',
-          'image_style' => 1110,
+          'image_style' => 700,
         ),
         'type' => 'image',
         'weight' => 1,
