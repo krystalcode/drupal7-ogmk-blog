@@ -409,6 +409,7 @@ function ogmk_blog_field_default_field_instances() {
         'allowed_formats' => array(
           'bonsai_html' => 0,
           'ogmk_basic_html' => 'ogmk_basic_html',
+          'ogmk_html' => 0,
           'ogmk_plain_html' => 'ogmk_plain_html',
           'plain_text' => 'plain_text',
         ),
@@ -420,6 +421,9 @@ function ogmk_blog_field_default_field_instances() {
               'weight' => 0,
             ),
             'ogmk_basic_html' => array(
+              'weight' => 0,
+            ),
+            'ogmk_html' => array(
               'weight' => 0,
             ),
             'ogmk_plain_html' => array(
