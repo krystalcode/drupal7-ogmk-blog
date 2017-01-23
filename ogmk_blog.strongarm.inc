@@ -126,6 +126,9 @@ function ogmk_blog_strongarm() {
       'token' => array(
         'custom_settings' => FALSE,
       ),
+      'ogmk_bootstrap_media_simple' => array(
+        'custom_settings' => TRUE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -155,6 +158,10 @@ function ogmk_blog_strongarm() {
           ),
           'ogmk_bootstrap_media' => array(
             'weight' => '6',
+            'visible' => FALSE,
+          ),
+          'ogmk_bootstrap_media_simple' => array(
+            'weight' => '4',
             'visible' => FALSE,
           ),
         ),

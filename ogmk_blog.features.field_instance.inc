@@ -114,6 +114,16 @@ function ogmk_blog_field_default_field_instances() {
         'type' => 'image_100x80',
         'weight' => 0,
       ),
+      'ogmk_bootstrap_media_simple' => array(
+        'label' => 'hidden',
+        'module' => 'atom_reference',
+        'settings' => array(
+          'link' => 1,
+          'override' => 0,
+        ),
+        'type' => 'image_100x80',
+        'weight' => 0,
+      ),
       'rss' => array(
         'label' => 'hidden',
         'module' => 'atom_reference',
@@ -178,6 +188,12 @@ function ogmk_blog_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 5,
       ),
+      'ogmk_bootstrap_media_simple' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
+      ),
       'rss' => array(
         'label' => 'above',
         'settings' => array(),
@@ -236,6 +252,16 @@ function ogmk_blog_field_default_field_instances() {
         ),
         'type' => 'image',
         'weight' => 2,
+      ),
+      'ogmk_bootstrap_media_simple' => array(
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => 'content',
+          'image_style' => '100x80',
+        ),
+        'type' => 'image',
+        'weight' => 1,
       ),
       'rss' => array(
         'label' => 'hidden',
@@ -306,6 +332,12 @@ function ogmk_blog_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 4,
+      ),
+      'ogmk_bootstrap_media_simple' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
       ),
       'rss' => array(
         'label' => 'inline',
@@ -382,6 +414,15 @@ function ogmk_blog_field_default_field_instances() {
         ),
         'type' => 'text_summary_or_trimmed',
         'weight' => 3,
+      ),
+      'ogmk_bootstrap_media_simple' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'trim_length' => 300,
+        ),
+        'type' => 'text_summary_or_trimmed',
+        'weight' => 2,
       ),
       'rss' => array(
         'label' => 'hidden',
@@ -474,6 +515,12 @@ function ogmk_blog_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 7,
+      ),
+      'ogmk_bootstrap_media_simple' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 6,
       ),
       'rss' => array(
         'label' => 'above',
