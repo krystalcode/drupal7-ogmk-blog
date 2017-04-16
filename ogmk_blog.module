@@ -130,7 +130,7 @@ function ogmk_blog_pathauto($op) {
  */
 function ogmk_blog_shop_has_posts($shop) {
   $shop_id = NULL;
-  if (is_int($shop)) {
+  if (is_numeric($shop)) {
     $shop_id = $shop;
   } else {
     $shop_id = $shop->nid;
